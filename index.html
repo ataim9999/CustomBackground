@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ataim404 background changer</title>
+  <style>
+    /* Set background image */
+    body {
+      background-image: url("");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh; /* Ensure the body takes up the full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Additional styling for content */
+    .content {
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Style for the input box */
+    #background-input {
+      margin: 10px;
+    }
+
+    /* Style for the "Set Background" button */
+    #set-background-btn {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>ataim404</h1>
+    <input type="text" id="background-input" placeholder="Enter image link">
+    <button id="set-background-btn">Set Background</button>
+    <p>pro / python / cpp / nodejs / dev</p>
+  </div>
+
+  <script>
+    // Function to set the background image when the button is clicked
+    function setBackground() {
+      var backgroundLink = document.getElementById('background-input').value;
+      document.body.style.backgroundImage = "url('" + backgroundLink + "')";
+    }
+
+    // Attach click event to the "Set Background" button
+    var setBackgroundBtn = document.getElementById('set-background-btn');
+    setBackgroundBtn.addEventListener('click', setBackground);
+  </script>
+</body>
+</html>
